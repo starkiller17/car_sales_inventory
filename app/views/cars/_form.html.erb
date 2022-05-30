@@ -1,0 +1,15 @@
+<%= form_with(model: @car, local: true) do |f| %>
+  <% if @car.new_record? %>
+    <%= f.hidden_field :created_by, value: @current_user.email %>
+  <% end %>
+  <%= f.hidden_field :udpated_by, value: @current_user.email %>
+  <%= select_tag :dealership_id, options_from_collection_for_select(@dealerships, :id, :name) %>
+  <%= f.text_field :car_serial_number, required: true, placeholder: "Serial number" %>
+  <%= f.text_field :brand, required: true, placeholder: "Car brand" %>
+  <%= f.text_field :model, required: true, placeholder: "Model" %>
+  <%= f.number_field :year, required: true, placeholder: "year" %>
+  <%= f.number_field :price, required: true, placeholder: "price", step: "0.001", minimum: "0" %>
+  <%= f.text_field :car_type, required: true, placeholder: "Car Type (Used or New)" %>
+
+  <%= f.submit(@car.new_record? ? "Add Car" : "Update Car") %>
+<% end %>

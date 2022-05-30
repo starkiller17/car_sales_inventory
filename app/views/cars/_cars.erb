@@ -1,0 +1,25 @@
+<%= link_to "New car", new_car_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Serial Number</th>
+      <th>Model</th>
+      <th>Brand</th>
+      <th>Year</th>
+      <th>Car Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cars.each do |car|  %>
+      <tr>
+        <td><%= car[:car_serial_number] %></td>
+        <td><%= car[:model] %></td>
+        <td><%= car[:brand] %></td>
+        <td><%= car[:year] %></td>
+        <td><%= car[:car_type] %></td>
+        <td><%= link_to car_edit_path "Edit" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

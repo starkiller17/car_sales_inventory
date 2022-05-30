@@ -1,0 +1,11 @@
+<%= form_with(model: @dealership, local: true) do |f| %>
+  <% if @dealership.new_record? %>
+    <%= f.hidden_field :created_by, value: @current_user.email %>
+  <% end %>
+  <%= f.hidden_field :udpated_by, value: @current_user.email %>
+
+  <%= f.text_field :name, required: true, placeholder: "Dealership name" %>
+  <%= f.text_field :address, required: true, placeholder: "Address" %>
+
+  <%= f.submit(@dealership.new_record? ? "Add Dealership" : "Update Dealership") %>
+<% end %>

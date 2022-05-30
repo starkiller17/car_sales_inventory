@@ -1,0 +1,22 @@
+<%= link_to  "New dealership", new_dealership_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Created at</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @dealerships.each do |dealership|  %>
+      <tr>
+        <td><%= dealership[:name] %></td>
+        <td><%= dealership[:address] %></td>
+        <td><%= dealership[:created_at] %></td>
+        <td><%= link_to "Edit", edit_dealership_path(dealership) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
