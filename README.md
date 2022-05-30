@@ -2,6 +2,10 @@
 # car_sales_inventory
 Small Ruby on Rails application that can do basic inventory management for a car dealership manager.
 =======
+
+First of all thanks for taking the time to have a look on this project! :)
+Below you can find some details about the project.
+
 # README
 
 Please check your Ruby and Rails versions.
@@ -37,7 +41,6 @@ Then you can start the application by typing "rails s", open a broswer and on th
 
   - You may choose which kind of tests to write (unit, integration...)
 
-  - Thanks for taking the time to have a look on this project! :)
 
 * Ruby version 3.0.2
 * Rails version: 6.0.4.1
