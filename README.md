@@ -18,7 +18,26 @@ User.create(email: "your_email", password: "your_password", user_type: "user")
 
 Then you can start the application by typing "rails s", open a broswer and on the url section type "localhost:3000" and you can login with the credentials from last step.
 
-Things you may want to cover:
+# Requeriments
+  Users can log in and can have type “user” or “admin”
+
+  Users can view the inventory of cars and their details
+
+  “Admin” users can add and delete cars from the inventory
+
+  Cars
+
+  Have a monetary price. The price depreciates 2% every month.
+
+  Can be new or used
+
+  Cars are located at a dealership, there may be multiple dealerships
+
+  Please include at least two tests
+
+  You may choose which kind of tests to write (unit, integration...)
+
+  Thanks for taking the time to have a look on this project! :)
 
 * Ruby version 3.0.2
 * RAils version: 6.0.4.1
